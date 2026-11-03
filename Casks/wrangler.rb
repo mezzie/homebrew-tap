@@ -1,6 +1,6 @@
 cask "wrangler" do
-  version "1.9.0"
-  sha256 "dc7b52bf584d61e5665c703d50e15cf10b59c2530bd14f61edf876b1b3786b3f"
+  version "1.9.1"
+  sha256 "d33a2ba04124dcb9adebd0524e49167988d043bcda1eb418d1112fdaf041b580"
 
   url "https://github.com/mezzie/wrangler/releases/download/v#{version}/Wrangler-#{version}.dmg"
   name "Wrangler"
