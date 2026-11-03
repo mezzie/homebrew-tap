@@ -1,6 +1,6 @@
 cask "wrangler" do
-  version "1.8.0"
-  sha256 "f7b88fa11487ed36e85694b40d29ca3f2ca640da996349255cd0b49e1a0335c4"
+  version "1.9.0"
+  sha256 "dc7b52bf584d61e5665c703d50e15cf10b59c2530bd14f61edf876b1b3786b3f"
 
   url "https://github.com/mezzie/wrangler/releases/download/v#{version}/Wrangler-#{version}.dmg"
   name "Wrangler"
@@ -10,11 +10,6 @@ cask "wrangler" do
   depends_on macos: ">= :ventura"
 
   app "Wrangler.app"
-
-  postflight do
-    system_command "xattr",
-                   args: ["-rd", "com.apple.quarantine", "#{appdir}/Wrangler.app"]
-  end
 
   zap trash: [
     "~/Library/Preferences/com.rngo.wrangler.plist",
