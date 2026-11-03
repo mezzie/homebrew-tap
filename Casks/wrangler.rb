@@ -11,6 +11,11 @@ cask "wrangler" do
 
   app "Wrangler.app"
 
+  postflight do
+    system_command "xattr",
+                   args: ["-rd", "com.apple.quarantine", "#{appdir}/Wrangler.app"]
+  end
+
   zap trash: [
     "~/Library/Preferences/com.rngo.wrangler.plist",
   ]
